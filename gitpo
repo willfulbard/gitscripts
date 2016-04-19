@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+branch="$(git branch | grep '^\* .*' | tr -d '* ')"
+echo -e "\033[1;32m####git push origin $branch\033[0m"
+`git push origin $branch`

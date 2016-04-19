@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+branch="$(git branch | grep '^\* .*' | tr -d '* ')"
+if [ $branch = 'master' ];
+then
+  echo -e "\033[1;31mYou cannot run this script on branch master"
+  exit 1
+fi
+
+
+echo -e "\033[1;35m----FINISHING UP----\033[0m"
+echo -e "\033[1;35m####current branch is $branch\033[0m"
+
+echo -e "\033[32m####git checkout master\033[0m"
+git checkout master
+
+echo -e "\033[32m####git pull --rebase upstream master\033[0m"
+git pull --rebase upstream master
+
+echo -e "\033[32m####git branch -d $branch\033[0m"
+git branch -d $branch
+
+echo -e "\033[32m####git push origin master\033[0m"
+git push origin master
+
+echo -e "\033[32m####git push origin --delete $branch\033[0m"
+git push origin --delete $branch
+
+echo -e "\033[1;35m####Final status: \033[0m"
+git status

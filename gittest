@@ -1,0 +1,10 @@
+#!/bin/bash
+branch="$(git branch | grep '^\* .*' | tr -d '* ')"
+echo -e "\033[1;35m####current branch is $branch\033[0m"
+
+vim test.txt
+
+cat test.txt
+
+echo -e "\033[1;35m####current branch is $branch\033[0m"
+
