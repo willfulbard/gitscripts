@@ -16,8 +16,8 @@ https://github.com/github/hub
 2.  Once you've finished and completed some work you'd like to push up, use the `gitprep` command
 3.  If the rebasing in `gitprep` worked, then your ready to create a pull request using `gitpullreq`
 4.  At this point, a frew different things could happen:
-  *)  If you need to amend your pull request, commit your changes in the branch and run `gitprep` to re-push your changes to your fork.
-  *)  If you want to start new work, then `git checkout master` and start at number 1
+    * If you need to amend your pull request, commit your changes in the branch and run `gitprep` to re-push your changes to your fork.
+    * If you want to start new work, then `git checkout master` and start at number 1
 5)  Once your pull request has been merged, checkout the branch associated with your pull request and run `gitfinish`.  WARNING: This will delete the branch both locally and remotely.
 
 Have fun!
