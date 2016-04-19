@@ -18,6 +18,7 @@ https://github.com/github/hub
 4.  At this point, a frew different things could happen:
     * If you need to amend your pull request, commit your changes in the branch and run `gitprep` to re-push your changes to your fork.
     * If you want to start new work, then `git checkout master` and start at number 1
+
 5)  Once your pull request has been merged, checkout the branch associated with your pull request and run `gitfinish`.  WARNING: This will delete the branch both locally and remotely.
 
 Have fun!
