@@ -1,10 +1,10 @@
 # gitscripts
 
-These are scripts that I use to streamline my git workflow
+These are scripts that I use to streamline my git workflow.  These scripts assume that you're working off of a branch of a master repo and that you've set the master repo as a remote by the name of 'upstream' (using a command like `git remote add upstream https://github.com/willfulbard/gitscripts.git`).
 
 ## Requirements
 
-git and github's command line interface hub.  You can find installation instructions for this here:
+git and github's command line interface hub.  You can find installation instructions for hub here:
 
 https://github.com/github/hub
 
