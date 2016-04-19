@@ -1,6 +1,9 @@
 # gitscripts
 
-These are scripts that I use to streamline my git workflow.  These scripts assume that you're working off of a branch of a master repo and that you've set the master repo as a remote by the name of 'upstream' (using a command like `git remote add upstream https://github.com/willfulbard/gitscripts.git`).
+These are scripts that I use to streamline my git workflow.  These scripts assume two things:
+
+1.  You're working off of a branch of a master repo and you've set the master repo as a remote called 'upstream' (using a command like `git remote add upstream https://github.com/willfulbard/gitscripts.git`).
+2.  You have a pull request template located at repo/.github/PULL_REQUEST_TEMPLATE.md
 
 ## Requirements
 
