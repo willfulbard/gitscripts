@@ -22,3 +22,6 @@ https://github.com/github/hub
 5)  Once your pull request has been merged, checkout the branch associated with your pull request and run `gitfinish`.  WARNING: This will delete the branch both locally and remotely.
 
 Have fun!
+
+##TODO
+*  Change vim to $EDITOR or whatever the variable is that git uses to indicate the editor
