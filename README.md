@@ -13,6 +13,10 @@ https://github.com/github/hub
 
 (tl;dr - just run `brew install hub`)
 
+## Installation
+
+Add the folder to your $PATH.  To test you can run `gitcommands` or `gitscripts` to see the help for the scripts.
+
 ## Usage
 
 1.  In your repository on the master branch, use `gitstart mybranchname` to start new work on a branch by that name.
