@@ -1,8 +1,10 @@
 #!/bin/bash
 set -e
 branch="$(git branch | grep '^\* .*' | tr -d '* ')"
+upstream="$(git remote -v | grep '^upstream.*(push)' | sed -E -e 's/^upstream//' -e 's/^[^a-z]//' -e 's/^.*github.com:?\/?//' -e 's/\.git.+/:master/')"
 
 echo -e "Your current branch is \033[1;35m$branch\033[0m"
+echo -e "Your current upstream is \033[1;35m$upstream\033[0m"
 
 echo -e "\033[1;32m gitstart; use in master branch; for starting work\033[0m"
 echo -e "\033[1;32m gitprep; use in feature branch; will rebase and push to github fork \033[0m"
