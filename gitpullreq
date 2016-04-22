@@ -14,7 +14,7 @@ vim ~/newreq.md
 `cd $repodir`
 
 # Create proper string for pull request
-upstream="$(git remote -v | grep '^upstream.*(push)' | sed -E -e 's/^upstream//' -e 's/^[^a-z]//' -e 's/^[^:]+://' -e 's/\.git.+/:master/')"
+upstream="$(git remote -v | grep '^upstream.*(push)' | sed -E -e 's/^upstream//' -e 's/^[^a-z]//' -e 's/^.*github.com:?\/?//' -e 's/\.git.+/:master/')"
 
 echo -e "\033[32m####hub pull-request -F ~/newreq.md -b $upstream \033[0m"
 `hub pull-request -o -F ~/newreq.md -b $upstream`
