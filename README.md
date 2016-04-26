@@ -4,6 +4,7 @@ These are scripts that I use to streamline my github workflow.  These scripts as
 
 1.  You're working off of a fork of a master repo and you've set the master repo as a remote called 'upstream' (using a command like `git remote add upstream https://github.com/willfulbard/gitscripts.git`).
 2.  You have a pull request template located at repo/.github/PULL_REQUEST_TEMPLATE.md
+3.  You have your $EDITOR variable set in your shell to your preferred text editor
 
 ## Requirements
 
@@ -30,4 +31,3 @@ Add the folder to your $PATH.  To test you can run `gitcommands` or `gitscripts`
 Have fun!
 
 ##TODO
-*  Change vim to $EDITOR or whatever the variable is that git uses to indicate the editor
