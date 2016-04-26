@@ -3,13 +3,13 @@ set -e
 
 echo -e "\033[1;35m----CREATING PULL REQUEST----\033[0m"
 
-echo -e "\033[32mCreating a new pull request template\033[0m"
+echo -e "\033[32mCreating a new pull request template, editing using $EDITOR\033[0m"
 repodir="$(git rev-parse --show-toplevel)"
 touch ~/newreq.md
 rm -f ~/newreq.md
 echo "cp -n $repodir/.github/PULL_REQUEST_TEMPLATE.md ~/newreq.md"
 cp -n $repodir/.github/PULL_REQUEST_TEMPLATE.md ~/newreq.md
-vim ~/newreq.md
+$EDITOR ~/newreq.md
 # Must cd back or hub will freakout below
 `cd $repodir`
 
