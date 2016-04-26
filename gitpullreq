@@ -8,7 +8,7 @@ repodir="$(git rev-parse --show-toplevel)"
 touch ~/newreq.md
 rm -f ~/newreq.md
 echo "cp -n $repodir/.github/PULL_REQUEST_TEMPLATE.md ~/newreq.md"
-`cp -n $repodir/.github/PULL_REQUEST_TEMPLATE.md ~/newreq.md`
+cp -n $repodir/.github/PULL_REQUEST_TEMPLATE.md ~/newreq.md
 vim ~/newreq.md
 # Must cd back or hub will freakout below
 `cd $repodir`
@@ -17,7 +17,7 @@ vim ~/newreq.md
 upstream="$(git remote -v | grep '^upstream.*(push)' | sed -E -e 's/^upstream//' -e 's/^[^a-z]//' -e 's/^.*github.com:?\/?//' -e 's/\.git.+/:master/')"
 
 echo -e "\033[32m####hub pull-request -F ~/newreq.md -b $upstream \033[0m"
-`hub pull-request -o -F ~/newreq.md -b $upstream`
+hub pull-request -F ~/newreq.md -b $upstream
 
 rm -f ~/newreq.md
 
