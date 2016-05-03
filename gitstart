@@ -1,5 +1,13 @@
 #!/bin/bash
 set -e
+
+branch="$(git branch | grep '^\* .*' | tr -d '* ')"
+if [ $branch != 'master' ];
+then
+  echo -e "\033[1;31mYou cannot run this script on a branch other than master\033[0m"
+  exit 1
+fi
+
 echo -e "\033[1;35m----STARTING WORK----\033[0m"
 
 echo -e "\033[32m####git pull --rebase upstream master\033[0m"
