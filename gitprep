@@ -18,7 +18,7 @@ git rebase -i HEAD~$1
 
 branch="$(git branch | grep '^\* .*' | tr -d '* ')"
 echo -e "\033[1;32m####git push --force origin $branch\033[0m"
-`git push --force origin $branch`
+git push --force origin $branch
 
 echo -e "\033[1;35m####Final status: \033[0m"
 git status
