@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+
+echo -e "\033[1;35m----STARTING MANUAL MERGE----\033[0m"
+
+IFS=':' read -ra vars <<< "$1"
+user=${vars[0]}
+branch=${vars[1]}
+gitfile="$(git remote -v | grep '^origin.*(fetch)$' | sed -E -e 's/^.*\///' -e 's/ \(fetch\)//')"
+
+echo -e "user: $user, branch: $branch, gitfile: $gitfile"
+
+echo -e "\033[32mgit checkout -b mergeme-$user-$branch\033[0m"
+git checkout -b mergeme-$user-$branch
+echo -e "\033[32mgit pull https://github.com/$user/$gitfile $branch\033[0m"
+git pull https://github.com/$user/$gitfile $branch
+
+
