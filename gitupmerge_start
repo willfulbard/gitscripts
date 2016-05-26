@@ -12,7 +12,7 @@ echo -e "user: $user, branch: $branch, gitfile: $gitfile"
 
 echo -e "\033[32mgit checkout -b mergeme-$user-$branch\033[0m"
 git checkout -b mergeme-$user-$branch
-echo -e "\033[32mgit pull https://github.com/$user/$gitfile $branch\033[0m"
-git pull https://github.com/$user/$gitfile $branch
+echo -e "\033[32mgit pull --rebase https://github.com/$user/$gitfile $branch\033[0m"
+git pull --rebase https://github.com/$user/$gitfile $branch
 
 
